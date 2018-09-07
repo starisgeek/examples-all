@@ -392,4 +392,7 @@
 			</plugin>
 		</plugins>
 	</build>
+	<modules>
+		<module>examples-springmvc</module>
+	</modules>
 </project>
