@@ -3,11 +3,9 @@ package com.starisgeek.examples.springmvc.configuration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.view.ContentNegotiatingViewResolver;
 
 @Configuration
 @EnableWebMvc
@@ -25,8 +23,6 @@ public class MvcConfiguration {
 	public static class DefaultWebMvcConfigurer implements WebMvcConfigurer {
 		@Override
 		public void configureViewResolvers(ViewResolverRegistry registry) {
-			// registry.viewResolver(new
-			// InternalResourceViewResolver("/WEB-INF/pages/", ".jsp"));
 			// 创建一个InternalResourceViewResolver实例，并设置prefix和suffex
 			registry.jsp("/WEB-INF/pages/", ".jsp");
 			// 创建ContentNegotiatingViewResolver实例。enableContentNegotiation方法参数不能传null!!!
