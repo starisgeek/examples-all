@@ -395,6 +395,6 @@
 	<modules>
 		<module>examples-springmvc</module>
 		<module>examples-springmvc-nonconfig</module>
-		<module>examples-springboot</module>
+		<module>examples-springboot</module> 
 	</modules>
 </project>
