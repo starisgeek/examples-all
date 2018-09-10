@@ -29,7 +29,7 @@ public class MvcConfiguration {
 			// InternalResourceViewResolver("/WEB-INF/pages/", ".jsp"));
 			// 创建一个InternalResourceViewResolver实例，并设置prefix和suffex
 			registry.jsp("/WEB-INF/pages/", ".jsp");
-			// 创建ContentNegotiatingViewResolver实例
+			// 创建ContentNegotiatingViewResolver实例。enableContentNegotiation方法参数不能传null!!!
 			// registry.enableContentNegotiation(new View[0]);
 		}
 	}
