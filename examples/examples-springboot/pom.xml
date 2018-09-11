@@ -6,6 +6,7 @@
 		<artifactId>examples</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+	<packaging>war</packaging>
 	<artifactId>examples-springboot</artifactId>
 
 	<properties>
