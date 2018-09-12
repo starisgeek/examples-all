@@ -45,6 +45,7 @@
 		<dom4j.version>2.1.0</dom4j.version>
 		<poi.version>3.17</poi.version>
 		<pinyin4j.version>2.5.1</pinyin4j.version>
+		<jedis.version>2.9.0</jedis.version>
 		<alipay-sdk-java.version>3.0.0</alipay-sdk-java.version>
 	</properties>
 
@@ -341,6 +342,11 @@
 				<groupId>org.dom4j</groupId>
 				<artifactId>dom4j</artifactId>
 				<version>${dom4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>redis.clients</groupId>
+				<artifactId>jedis</artifactId>
+				<version>${jedis.version}</version>
 			</dependency>
 			<!-- pinyin -->
 			<dependency>
