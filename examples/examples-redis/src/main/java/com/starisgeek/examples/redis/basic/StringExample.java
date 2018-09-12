@@ -4,6 +4,11 @@ import com.starisgeek.examples.redis.JedisUtil;
 
 import redis.clients.jedis.Jedis;
 
+/**
+ * append会预分配内存，导致内存浪费，并且会形成内存碎片，尽量使用set。
+ * @author Administrator
+ *
+ */
 public class StringExample {
 	private static final int COUNT = 100_0000;
 	private static final String KEY_PREFIX = "key_";
