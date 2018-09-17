@@ -1,4 +1,4 @@
-linux部署(非集群):
+linux部署(非集群):</br>
 1.安装jdk1.8+
 2.unzip rocketmq-all-4.3.0-source-release.zip
 mv rocketmq-all-4.3.0-bin-release /usr/local/rocketmq-all-4.3.0-bin-release
