@@ -403,5 +403,6 @@
 		<module>examples-springmvc-nonconfig</module>
 		<module>examples-springboot</module>
 		<module>examples-redis</module>
+		<module>examples-rocketmq</module>
 	</modules>
 </project>
