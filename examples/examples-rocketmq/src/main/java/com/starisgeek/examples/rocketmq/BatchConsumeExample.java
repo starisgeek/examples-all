@@ -18,16 +18,19 @@ public class BatchConsumeExample {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
 				"spring-rocketmq-consumer.xml");
 		DefaultMQPushConsumer consumer = context.getBean(DefaultMQPushConsumer.class);
+		// consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
+		// consumer.setMessageModel(MessageModel.BROADCASTING);
 		consumer.registerMessageListener(new MessageListenerConcurrently() {
 			@Override
 			public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> msgs,
 					ConsumeConcurrentlyContext context) {
 				logger.info("[{}] message's size:{}", Thread.currentThread().getName(),
 						msgs.size());
+				// RocketmqUtil.sleep(5, TimeUnit.SECONDS);
 				for (MessageExt msg : msgs) {
-					logger.info("[{}] Received message:{} from rocketmq broker",
+					logger.info("[{}] Received message:{} from rocketmq broker, queueId:{}",
 							Thread.currentThread().getName(),
-							new String(msg.getBody(), RocketmqUtil.UTF8));
+							new String(msg.getBody(), RocketmqUtil.UTF8), msg.getQueueId());
 				}
 				return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
 			}
