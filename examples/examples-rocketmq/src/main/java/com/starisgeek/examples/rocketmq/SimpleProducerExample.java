@@ -14,7 +14,7 @@ public class SimpleProducerExample {
 				"spring-rocketmq-producer.xml");
 		DefaultMQProducer producer = context.getBean(DefaultMQProducer.class);
 		try {
-			for (int i = 0; i < 100; i++) {
+			for (int i = 0; i < 10; i++) {
 				Message msg = new Message(RocketmqUtil.TOPIC_EXAMPLE,
 						("message_" + (i + 1)).getBytes(RocketmqUtil.UTF8));
 				producer.send(msg);
