@@ -19,4 +19,25 @@ public class ExampleController {
 	public String simpleResponse() {
 		return "simple response";
 	}
+
+	@GetMapping("/simpleJsonResponse")
+	@ResponseBody
+	public Example simpleJsonResponse() {
+		Example e = new Example();
+		e.setV(79);
+		return e;
+	}
+
+	public static class Example {
+		private int v;
+
+		public int getV() {
+			return v;
+		}
+
+		public void setV(int v) {
+			this.v = v;
+		}
+
+	}
 }
