@@ -12,4 +12,9 @@ public class ExampleController {
 	public String hello() {
 		return "hello";
 	}
+
+	@GetMapping("/simpleResponse")
+	public String simpleResponse() {
+		return "simple response";
+	}
 }
