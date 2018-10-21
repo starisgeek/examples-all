@@ -17,7 +17,7 @@ public class ExampleController {
 	@GetMapping("/simpleResponse")
 	@ResponseBody
 	public String simpleResponse() {
-		return "simple response";
+		return "简单的字符串";
 	}
 
 	@GetMapping("/simpleJsonResponse")
