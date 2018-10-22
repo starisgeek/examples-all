@@ -1,5 +1,7 @@
 package com.starisgeek.examples.springmvc.initializer;
 
+import javax.servlet.Filter;
+
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import com.starisgeek.examples.springmvc.configuration.MvcConfiguration;
@@ -25,6 +27,14 @@ public class DefaultDispatcherServletInitializer
 	@Override
 	protected String[] getServletMappings() {
 		return new String[] { "/" };
+	}
+
+	/**
+	 * 这里可以配置Filter
+	 */
+	@Override
+	protected Filter[] getServletFilters() {
+		return super.getServletFilters();
 	}
 
 }
