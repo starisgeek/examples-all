@@ -1,6 +1,7 @@
 package com.starisgeek.examples.rocketmq;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
@@ -26,7 +27,7 @@ public class BatchConsumeExample {
 					ConsumeConcurrentlyContext context) {
 				logger.info("[{}] message's size:{}", Thread.currentThread().getName(),
 						msgs.size());
-				// RocketmqUtil.sleep(5, TimeUnit.SECONDS);
+				RocketmqUtil.sleep(5, TimeUnit.SECONDS);
 				for (MessageExt msg : msgs) {
 					logger.info("[{}] Received message:{} from rocketmq broker, queueId:{}",
 							Thread.currentThread().getName(),
