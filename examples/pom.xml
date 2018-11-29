@@ -416,5 +416,8 @@
 		<module>examples-springboot</module>
 		<module>examples-redis</module>
 		<module>examples-rocketmq</module>
-	</modules>
+		<module>examples-spring</module>
+		<module>examples-web-front</module>
+        <module>examples-datastructure</module>
+    </modules>
 </project>
