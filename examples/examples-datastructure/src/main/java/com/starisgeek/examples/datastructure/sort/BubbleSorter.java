@@ -6,13 +6,18 @@ package com.starisgeek.examples.datastructure.sort;
 public class BubbleSorter {
     public void sort(int[] nums) {
         int n = nums.length;
+        boolean flag = false;
         for (int i = 1; i < n; i++) {
             for (int j = 0; j < n - i; j++) {
                 if (nums[j] > nums[j + 1]) {
                     int tmp = nums[j];
                     nums[j] = nums[j + 1];
                     nums[j + 1] = tmp;
+                    flag = true;
                 }
+            }
+            if (!flag) {
+                break;
             }
         }
     }
