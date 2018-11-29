@@ -10,9 +10,7 @@ public class BubbleSorter {
         for (int i = 1; i < n; i++) {
             for (int j = 0; j < n - i; j++) {
                 if (nums[j] > nums[j + 1]) {
-                    int tmp = nums[j];
-                    nums[j] = nums[j + 1];
-                    nums[j + 1] = tmp;
+                    Sorts.swap(nums, j, j + 1);
                     flag = true;
                 }
             }
