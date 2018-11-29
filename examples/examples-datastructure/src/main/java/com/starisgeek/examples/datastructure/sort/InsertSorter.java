@@ -21,7 +21,7 @@ public class InsertSorter {
 
     public static void main(String[] args) {
         int[] nums = Sorts.generateNumbers(20);
-        BubbleSorter sorter = new BubbleSorter();
+        InsertSorter sorter = new InsertSorter();
         sorter.sort(nums);
         Sorts.printArray(nums);
     }
