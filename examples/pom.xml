@@ -313,11 +313,6 @@
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/com.alipay.sdk/alipay-sdk-java -->
 			<dependency>
-				<groupId>com.alipay.sdk</groupId>
-				<artifactId>alipay-sdk-java</artifactId>
-				<version>${alipay-sdk-java.version}</version>
-			</dependency>
-			<dependency>
 				<groupId>com.aliyun.mns</groupId>
 				<artifactId>aliyun-sdk-mns</artifactId>
 				<version>${aliyun-sdk-mns.version}</version>
@@ -354,11 +349,6 @@
 				<groupId>org.dom4j</groupId>
 				<artifactId>dom4j</artifactId>
 				<version>${dom4j.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>redis.clients</groupId>
-				<artifactId>jedis</artifactId>
-				<version>${jedis.version}</version>
 			</dependency>
 			<!-- pinyin -->
 			<dependency>
@@ -419,5 +409,8 @@
 		<module>examples-spring</module>
 		<module>examples-web-front</module>
         <module>examples-datastructure</module>
-    </modules>
+        <module>examples-id-generator</module>
+		<module>examples-springcloud</module>
+		<module>examples-springcloud</module>
+	</modules>
 </project>
